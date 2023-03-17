@@ -1,0 +1,23 @@
+{
+    "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintPath": "/Users/danielkerrigan/opt/miniconda3/envs/svelte-widget/bin/pylint",
+    "python.defaultInterpreterPath": "/Users/danielkerrigan/opt/miniconda3/envs/svelte-widget/bin/python",
+    "svelte.enable-ts-plugin": true,
+    "eslint.nodePath": "/Users/danielkerrigan/opt/miniconda3/envs/svelte-widget/bin/node",
+    "editor.formatOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "svelte"
+    ],
+    "svelte.plugin.svelte.defaultScriptLanguage": "ts",
+    "autoDocstring.docstringFormat": "sphinx",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+}

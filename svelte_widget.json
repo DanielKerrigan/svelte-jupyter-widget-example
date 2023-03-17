@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "svelte_widget/extension": true
+  }
+}
