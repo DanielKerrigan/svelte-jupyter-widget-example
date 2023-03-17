@@ -36,8 +36,6 @@ the `install` command every time that you rebuild your extension. For certain in
 you might also need another flag instead of `--sys-prefix`, but we won't cover the meaning
 of those flags here.
 
-If you try to run `pip install -e ".[test, examples, dev]"` subsequent times and get an error, then trying uninstalling with `pip uninstall svelte_widget` first.
-
 ### How to see your changes
 #### Typescript:
 Watch the source directory and run Jupyter lab or notebook at the same time in different
