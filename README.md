@@ -58,7 +58,7 @@ If you make a change to the python code then you will need to restart the notebo
 The following extensions are useful when developing in [VSCode](https://code.visualstudio.com):
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier]https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
 
 `.vscode/settings.json` contains modified settings for linting and formatting code. You will need to update the pylint, python, and node paths in this file.
