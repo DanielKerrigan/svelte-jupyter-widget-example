@@ -1,7 +1,7 @@
 
 # Svelte Jupyter Widget Example
 
-This is an updated example of using Svelte in a custom Jupyter widget. It was created from [widget-ts-cookiecutter](https://github.com/jupyter-widgets/widget-ts-cookiecutter). For an older example, see [widget-svelte-cookiecutter](https://github.com/cabreraalex/widget-svelte-cookiecutter).
+This is an updated example of using [Svelte](https://svelte.dev) in a custom Jupyter widget. It was created from [widget-ts-cookiecutter](https://github.com/jupyter-widgets/widget-ts-cookiecutter). For an older example, see [widget-svelte-cookiecutter](https://github.com/cabreraalex/widget-svelte-cookiecutter).
 
 ## Development Installation
 
@@ -11,7 +11,7 @@ conda create -n svelte_widget -c conda-forge nodejs yarn python jupyterlab
 conda activate svelte_widget
 ```
 
-Install the python. This will also build the TS package.
+Install the Python package. This will also build the JS package.
 ```bash
 pip install -e ".[test, examples, dev]"
 ```
@@ -21,7 +21,6 @@ notebook / lab frontend. For lab, this is done by the command:
 
 ```
 jupyter labextension develop --overwrite .
-jlpm run build
 ```
 
 For classic notebook, you need to run:
@@ -35,6 +34,14 @@ Note that the `--symlink` flag doesn't work on Windows, so you will here have to
 the `install` command every time that you rebuild your extension. For certain installations
 you might also need another flag instead of `--sys-prefix`, but we won't cover the meaning
 of those flags here.
+
+If you need to re-run `pip install -e .` at some point after running `jupyter labextension develop --overwrite .` or `jupyter nbextension install --sys-prefix --symlink --overwrite --py svelte_widget`, then you will either need to remove the symbolic links created by those commands or modify the install command to `pip install --ignore-installed -e .`. For lab, you can remove the symbolic links with
+
+```
+rm /Users/danielkerrigan/opt/miniconda3/envs/svelte_widget/share/jupyter/labextensions/svelte_widget
+```
+
+You will need to update this path to the `labextensions` folder based on the output of `jupyter labextension list`. For notebook, you can do that same, except replace `labextensions` with `nbextensions` in the path. Or, you can run `jupyter nbextension uninstall svelte_widget`.
 
 ### How to see your changes
 #### Typescript:
