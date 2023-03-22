@@ -30,12 +30,6 @@ Contents
    introduction
 
 .. toctree::
-   :maxdepth: 1
-
-   examples/index
-
-
-.. toctree::
    :maxdepth: 2
    :caption: Development
 
