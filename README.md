@@ -7,13 +7,13 @@ This is an updated example of using [Svelte](https://svelte.dev) in a custom Jup
 
 Create a dev environment:
 ```bash
-conda create -n svelte_widget -c conda-forge nodejs yarn python jupyterlab
-conda activate svelte_widget
+conda create -n svelte-widget -c conda-forge nodejs yarn python jupyterlab
+conda activate svelte-widget
 ```
 
 Install the Python package. This will also build the JS package.
 ```bash
-pip install -e ".[test, examples, dev]"
+pip install -e ".[test,examples,docs,dev]"
 ```
 
 When developing your extensions, you need to manually enable your extensions with the
@@ -38,7 +38,7 @@ of those flags here.
 If you need to re-run `pip install -e .` at some point after running `jupyter labextension develop --overwrite .` or `jupyter nbextension install --sys-prefix --symlink --overwrite --py svelte_widget`, then you will either need to remove the symbolic links created by those commands or modify the install command to `pip install --ignore-installed -e .`. For lab, you can remove the symbolic links with
 
 ```
-rm /Users/danielkerrigan/opt/miniconda3/envs/svelte_widget/share/jupyter/labextensions/svelte_widget
+rm /Users/danielkerrigan/opt/miniconda3/envs/svelte-widget/share/jupyter/labextensions/svelte_widget
 ```
 
 You will need to update this path to the `labextensions` folder based on the output of `jupyter labextension list`. For notebook, you can do that same, except replace `labextensions` with `nbextensions` in the path. Or, you can run `jupyter nbextension uninstall svelte_widget`.
